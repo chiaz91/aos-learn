@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="schools">
+        <item>SCSE</item>
+        <item>EEE</item>
+        <item>MAE</item>
+        <item>ADM</item>
+        <item>NBS</item>
+    </string-array>
+</resources>
