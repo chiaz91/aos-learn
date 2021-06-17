@@ -19,7 +19,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import aos.learn.todo.Constants;
 import aos.learn.todo.R;
 import aos.learn.todo.adapter.TaskAdapter;
-import aos.learn.todo.entity.Task;
+import aos.learn.todo.data.Task;
 import aos.learn.todo.viewmodel.TaskViewModel;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener, TaskAdapter.OnTaskClickedListener {
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         fabAdd.setOnClickListener(this);
 
         rvTodo = findViewById(R.id.rv_todos);
-        adapter = new TaskAdapter(model.getTasks().getValue(), this);
+        adapter = new TaskAdapter( this);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         mLayoutManager.setOrientation(RecyclerView.VERTICAL);
         rvTodo.setAdapter(adapter);

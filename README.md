@@ -34,3 +34,4 @@ the project demonstrate the following features
 * custom list with RecyclerView
 * date & time picker
 * ViewModel & LiveData
+* Room Database ([Ref](https://developer.android.com/codelabs/android-room-with-a-view))

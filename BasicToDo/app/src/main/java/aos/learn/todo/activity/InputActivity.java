@@ -25,7 +25,7 @@ import java.util.Locale;
 
 import aos.learn.todo.Constants;
 import aos.learn.todo.R;
-import aos.learn.todo.entity.Task;
+import aos.learn.todo.data.Task;
 
 
 public class InputActivity extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {

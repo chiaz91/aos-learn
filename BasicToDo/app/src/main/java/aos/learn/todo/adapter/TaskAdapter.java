@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 
 import aos.learn.todo.R;
-import aos.learn.todo.entity.Task;
+import aos.learn.todo.data.Task;
 
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
@@ -26,16 +26,15 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
     List<Task> taskList;
     OnTaskClickedListener listener;
 
-    public TaskAdapter(List<Task> taskList, OnTaskClickedListener listener){
+    public TaskAdapter(OnTaskClickedListener listener){
         super();
-        this.taskList = taskList;
         this.listener = listener;
         this.sdf = new SimpleDateFormat(FORMAT_DATE);
     }
 
     @Override
     public int getItemCount() {
-        return this.taskList.size();
+        return taskList == null? 0 : taskList.size();
     }
 
     public void setTaskList(List<Task> taskList){
